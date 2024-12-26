@@ -1,0 +1,25 @@
+{
+	"mode": "All",
+	"policyRule": {
+		"if": {
+			"allOf": [
+				{
+					"field": "type",
+					"equals": "Microsoft.Compute/virtualMachines"
+				},
+				{
+					"field": "tags['CostCenter']",
+					"exists": "false"
+				},
+				{
+					"field": "tags['Project']",
+					"exists": "false"
+				}
+			]
+		},
+		"then": {
+			"effect": "deny"
+		}
+	},
+	"parameters": {}
+}

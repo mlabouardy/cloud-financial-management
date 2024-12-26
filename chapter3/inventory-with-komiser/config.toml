@@ -1,0 +1,18 @@
+[[aws]]
+name="production"
+source="CREDENTIALS_FILE"
+profile="default"
+
+[[azure]]
+name="staging"
+tenantId="TENANT_ID"
+clientId="CLIENT_ID"
+clientSecret="CLIENT_SECRET"
+subscriptionId="SUBSCRIPTION_ID"
+
+[[gcp]]
+  name="sandbox"
+  serviceAccountKeyPath="./sa.json"
+
+[postgres]
+uri="postgres://postgres:postgres@localhost:5432/komiser?sslmode=disable"

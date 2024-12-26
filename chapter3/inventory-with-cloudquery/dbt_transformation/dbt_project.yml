@@ -1,0 +1,25 @@
+name: aws_asset_inventory
+version: 2.2.9
+config-version: 2
+profile: aws_asset_inventory
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+clean-targets:
+  - target
+  - dbt_packages
+models: null
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order:
+      - aws_asset_inventory
+      - dbt_utils

@@ -1,0 +1,15 @@
+policies:
+  - name: enforce-costcenter-project-tags
+    resource: azure.vm
+    filters:
+      - type: value
+        key: tags.CostCenter
+        value: absent
+      - type: value
+        key: tags.Project
+        value: absent
+    actions:
+      - type: tag
+        tags:
+          CostCenter: "CC101-Marketing"  
+          Project: "LandingPage"   

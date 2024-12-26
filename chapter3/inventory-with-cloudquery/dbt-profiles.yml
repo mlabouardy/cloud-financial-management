@@ -1,0 +1,16 @@
+config:
+  send_anonymous_usage_stats: False
+  use_colors: True
+
+aws_asset_inventory:
+  target: postgres
+  outputs:
+    postgres:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST') }}"
+      user: "{{ env_var('POSTGRES_USER') }}"
+      pass: "{{ env_var('POSTGRES_PASSWORD') }}"
+      port: 5432
+      dbname: "{{ env_var('POSTGRES_DB') }}"
+      schema: public
+      threads: 1

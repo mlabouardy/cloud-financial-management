@@ -1,0 +1,534 @@
+
+
+============================== 12:17:07.233000 | 3c127d71-dd80-4c83-a6fe-c6912e6859b3 ==============================
+[0m12:17:07.233000 [info ] [MainThread]: Running with dbt=1.8.1
+[0m12:17:07.244370 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/usr/app/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'False'}
+[0m12:17:08.724507 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m12:17:08.837447 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m12:17:08.850278 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m12:17:18.403287 [info ] [MainThread]: Found 1 model, 434 macros
+[0m12:17:18.417329 [info ] [MainThread]: 
+[0m12:17:18.423021 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:17:18.438044 [debug] [ThreadPool]: Acquiring new postgres connection 'list_asset_inventory'
+[0m12:17:18.636781 [debug] [ThreadPool]: Using postgres connection "list_asset_inventory"
+[0m12:17:18.640941 [debug] [ThreadPool]: On list_asset_inventory: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "list_asset_inventory"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:17:18.644303 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:17:18.684817 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "db" to address: Name or service not known
+
+[0m12:17:18.696341 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "list_asset_inventory"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:17:18.701205 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m12:17:18.705576 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m12:17:18.709127 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m12:17:18.712772 [debug] [ThreadPool]: On list_asset_inventory: No close available on handle
+[0m12:17:18.718736 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:17:18.722327 [debug] [MainThread]: Connection 'list_asset_inventory' was properly closed.
+[0m12:17:18.726733 [info ] [MainThread]: 
+[0m12:17:18.730764 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.30 seconds (0.30s).
+[0m12:17:18.735935 [error] [MainThread]: Encountered an error:
+Database Error
+  could not translate host name "db" to address: Name or service not known
+  
+[0m12:17:18.743337 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 12.175544, "process_user_time": 19.73234, "process_kernel_time": 0.422972, "process_mem_max_rss": "146548", "process_out_blocks": "2679", "command_success": false, "process_in_blocks": "0"}
+[0m12:17:18.748705 [debug] [MainThread]: Command `dbt run` failed at 12:17:18.747952 after 12.18 seconds
+[0m12:17:18.752212 [debug] [MainThread]: Flushing usage events
+
+
+============================== 12:57:05.442665 | c564dd3e-b2e1-434c-82bd-81b16ba95749 ==============================
+[0m12:57:05.442665 [info ] [MainThread]: Running with dbt=1.8.1
+[0m12:57:05.450959 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/usr/app/logs', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m12:57:06.604639 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m12:57:06.687836 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m12:57:07.289386 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:57:07.293642 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:57:07.970236 [info ] [MainThread]: Found 1 model, 434 macros
+[0m12:57:07.985096 [info ] [MainThread]: 
+[0m12:57:07.991752 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:57:08.002305 [debug] [ThreadPool]: Acquiring new postgres connection 'list_asset_inventory'
+[0m12:57:08.230863 [debug] [ThreadPool]: Using postgres connection "list_asset_inventory"
+[0m12:57:08.235282 [debug] [ThreadPool]: On list_asset_inventory: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "list_asset_inventory"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:57:08.238531 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:57:08.278819 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "db" to address: Name or service not known
+
+[0m12:57:08.290572 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "list_asset_inventory"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:57:08.294887 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m12:57:08.298971 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m12:57:08.302814 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m12:57:08.306419 [debug] [ThreadPool]: On list_asset_inventory: No close available on handle
+[0m12:57:08.311953 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:57:08.315300 [debug] [MainThread]: Connection 'list_asset_inventory' was properly closed.
+[0m12:57:08.319367 [info ] [MainThread]: 
+[0m12:57:08.323635 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.33 seconds (0.33s).
+[0m12:57:08.328855 [error] [MainThread]: Encountered an error:
+Database Error
+  could not translate host name "db" to address: Name or service not known
+  
+[0m12:57:08.340213 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 3.2462316, "process_user_time": 10.21301, "process_kernel_time": 0.27885, "process_mem_max_rss": "144172", "process_out_blocks": "1864", "command_success": false, "process_in_blocks": "0"}
+[0m12:57:08.346712 [debug] [MainThread]: Command `dbt run` failed at 12:57:08.345612 after 3.25 seconds
+[0m12:57:08.352576 [debug] [MainThread]: Flushing usage events
+
+
+============================== 12:57:45.726166 | 1ac90333-b75b-4d10-9b9a-3b3f06e40d67 ==============================
+[0m12:57:45.726166 [info ] [MainThread]: Running with dbt=1.8.1
+[0m12:57:45.736916 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/usr/app/logs', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m12:57:47.001640 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m12:57:47.246510 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m12:57:47.980226 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m12:57:54.960945 [info ] [MainThread]: Found 1 model, 434 macros
+[0m12:57:54.974959 [info ] [MainThread]: 
+[0m12:57:54.984524 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:57:55.006626 [debug] [ThreadPool]: Acquiring new postgres connection 'list_asset_inventory'
+[0m12:57:55.287088 [debug] [ThreadPool]: Using postgres connection "list_asset_inventory"
+[0m12:57:55.291998 [debug] [ThreadPool]: On list_asset_inventory: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "list_asset_inventory"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:57:55.295292 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:57:55.336691 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "postgres" to address: Name or service not known
+
+[0m12:57:55.347999 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "list_asset_inventory"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:57:55.352022 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m12:57:55.355995 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m12:57:55.359361 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m12:57:55.363176 [debug] [ThreadPool]: On list_asset_inventory: No close available on handle
+[0m12:57:55.369096 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:57:55.372924 [debug] [MainThread]: Connection 'list_asset_inventory' was properly closed.
+[0m12:57:55.377075 [info ] [MainThread]: 
+[0m12:57:55.381490 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.39 seconds (0.39s).
+[0m12:57:55.386774 [error] [MainThread]: Encountered an error:
+Database Error
+  could not translate host name "postgres" to address: Name or service not known
+  
+[0m12:57:55.398054 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 10.030517, "process_user_time": 16.60947, "process_kernel_time": 0.26095, "process_mem_max_rss": "146240", "process_out_blocks": "2679", "command_success": false, "process_in_blocks": "0"}
+[0m12:57:55.405750 [debug] [MainThread]: Command `dbt run` failed at 12:57:55.404309 after 10.04 seconds
+[0m12:57:55.411345 [debug] [MainThread]: Flushing usage events
+
+
+============================== 13:03:28.758535 | a377ac84-8db5-4e8c-a0e2-1c872f65c592 ==============================
+[0m13:03:28.758535 [info ] [MainThread]: Running with dbt=1.8.1
+[0m13:03:28.768013 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m13:03:29.903991 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m13:03:29.987661 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m13:03:30.401210 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m13:03:37.453345 [info ] [MainThread]: Found 1 model, 434 macros
+[0m13:03:37.467402 [info ] [MainThread]: 
+[0m13:03:37.476530 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:03:37.508219 [debug] [ThreadPool]: Acquiring new postgres connection 'list_asset_inventory'
+[0m13:03:37.769911 [debug] [ThreadPool]: Using postgres connection "list_asset_inventory"
+[0m13:03:37.774990 [debug] [ThreadPool]: On list_asset_inventory: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "list_asset_inventory"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:03:37.795817 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:03:37.820614 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "db" to address: Name or service not known
+
+[0m13:03:37.832820 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "list_asset_inventory"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:03:37.836560 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m13:03:37.840641 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m13:03:37.844616 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m13:03:37.849862 [debug] [ThreadPool]: On list_asset_inventory: No close available on handle
+[0m13:03:37.857611 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:03:37.860907 [debug] [MainThread]: Connection 'list_asset_inventory' was properly closed.
+[0m13:03:37.865613 [info ] [MainThread]: 
+[0m13:03:37.870383 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.39 seconds (0.39s).
+[0m13:03:37.875718 [error] [MainThread]: Encountered an error:
+Database Error
+  could not translate host name "db" to address: Name or service not known
+  
+[0m13:03:37.887516 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 9.48096, "process_user_time": 15.902246, "process_kernel_time": 0.327248, "process_mem_max_rss": "146208", "process_out_blocks": "2679", "command_success": false, "process_in_blocks": "0"}
+[0m13:03:37.894800 [debug] [MainThread]: Command `dbt run` failed at 13:03:37.893442 after 9.49 seconds
+[0m13:03:37.908842 [debug] [MainThread]: Flushing usage events
+
+
+============================== 13:14:41.970580 | 1cfb91d9-a597-478d-bcbe-e87b3eacb053 ==============================
+[0m13:14:41.970580 [info ] [MainThread]: Running with dbt=1.8.1
+[0m13:14:41.979639 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'version_check': 'True', 'profiles_dir': '/root/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'False'}
+[0m13:14:43.317133 [info ] [MainThread]: Registered adapter: postgres=1.8.1
+[0m13:14:43.408090 [debug] [MainThread]: checksum: ebc509fb14e151ea268e89b60fd5abf912ed99129f87516462718fa2f14f4838, vars: {}, profile: , target: , version: 1.8.1
+[0m13:14:43.826800 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m13:14:50.886205 [info ] [MainThread]: Found 1 model, 434 macros
+[0m13:14:50.899931 [info ] [MainThread]: 
+[0m13:14:50.907413 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:14:50.921721 [debug] [ThreadPool]: Acquiring new postgres connection 'list_asset_inventory'
+[0m13:14:51.180253 [debug] [ThreadPool]: Using postgres connection "list_asset_inventory"
+[0m13:14:51.184756 [debug] [ThreadPool]: On list_asset_inventory: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "list_asset_inventory"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:14:51.188841 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:14:51.255085 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m13:14:51.266098 [debug] [ThreadPool]: On list_asset_inventory: Close
+[0m13:14:51.280363 [debug] [ThreadPool]: Acquiring new postgres connection 'list_asset_inventory_public'
+[0m13:14:51.318773 [debug] [ThreadPool]: Using postgres connection "list_asset_inventory_public"
+[0m13:14:51.322612 [debug] [ThreadPool]: On list_asset_inventory_public: BEGIN
+[0m13:14:51.325969 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:14:51.362434 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:51.366178 [debug] [ThreadPool]: Using postgres connection "list_asset_inventory_public"
+[0m13:14:51.369782 [debug] [ThreadPool]: On list_asset_inventory_public: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "list_asset_inventory_public"} */
+select
+      'asset_inventory' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'asset_inventory' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'asset_inventory' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m13:14:51.376696 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.0 seconds
+[0m13:14:51.387550 [debug] [ThreadPool]: On list_asset_inventory_public: ROLLBACK
+[0m13:14:51.391252 [debug] [ThreadPool]: On list_asset_inventory_public: Close
+[0m13:14:51.427030 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:51.430485 [debug] [MainThread]: On master: BEGIN
+[0m13:14:51.433535 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:14:51.469141 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:51.473920 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:51.478460 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:14:51.486367 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m13:14:51.495296 [debug] [MainThread]: On master: ROLLBACK
+[0m13:14:51.499019 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:51.502137 [debug] [MainThread]: On master: BEGIN
+[0m13:14:51.505815 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:51.509199 [debug] [MainThread]: On master: COMMIT
+[0m13:14:51.512415 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:51.515613 [debug] [MainThread]: On master: COMMIT
+[0m13:14:51.519511 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:14:51.522710 [debug] [MainThread]: On master: Close
+[0m13:14:51.527065 [info ] [MainThread]: Concurrency: 1 threads (target='postgres')
+[0m13:14:51.530793 [info ] [MainThread]: 
+[0m13:14:51.596642 [debug] [Thread-1 (]: Began running node model.aws_asset_inventory.aws_resources
+[0m13:14:51.601643 [info ] [Thread-1 (]: 1 of 1 START sql view model public.aws_resources ............................... [RUN]
+[0m13:14:51.606897 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_asset_inventory_public, now model.aws_asset_inventory.aws_resources)
+[0m13:14:51.611650 [debug] [Thread-1 (]: Began compiling node model.aws_asset_inventory.aws_resources
+[0m13:14:51.675862 [debug] [Thread-1 (]: Using postgres connection "model.aws_asset_inventory.aws_resources"
+[0m13:14:51.680887 [debug] [Thread-1 (]: On model.aws_asset_inventory.aws_resources: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "node_id": "model.aws_asset_inventory.aws_resources"} */
+
+    
+    
+SELECT 
+    t.table_name,
+    MAX(CASE WHEN UPPER(c.column_name) = 'ARN' THEN 1 ELSE 0 END) AS arn_exist,
+    MAX(CASE WHEN UPPER(c.column_name) = 'ACCOUNT_ID' THEN 1 ELSE 0 END) AS account_id_exist,
+    MAX(CASE WHEN UPPER(c.column_name) = 'REQUEST_ACCOUNT_ID' THEN 1 ELSE 0 END) AS request_account_id_exist,
+    MAX(CASE WHEN UPPER(c.column_name) = 'REGION' THEN 1 ELSE 0 END) AS region_exist,
+    MAX(CASE WHEN UPPER(c.column_name) = 'TAGS' THEN 1 ELSE 0 END) AS tags_exist  
+FROM 
+    INFORMATION_SCHEMA.TABLES t
+LEFT JOIN 
+    INFORMATION_SCHEMA.COLUMNS c ON t.table_name = c.table_name AND t.table_schema = c.table_schema
+WHERE
+    t.table_type = 'BASE TABLE' AND t.table_name LIKE 'aws_%s'
+GROUP BY 
+    t.table_name
+HAVING
+    MAX(CASE WHEN UPPER(c.column_name) = 'ARN' THEN 1 ELSE 0 END)::bool
+    AND (MAX(CASE WHEN UPPER(c.column_name) = 'ACCOUNT_ID' THEN 1 ELSE 0 END)::bool OR MAX(CASE WHEN UPPER(c.column_name) = 'REQUEST_ACCOUNT_ID' THEN 1 ELSE 0 END)::bool)
+
+
+
+  
+[0m13:14:51.685790 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:14:51.730417 [debug] [Thread-1 (]: SQL status: SELECT 6 in 0.0 seconds
+[0m13:14:51.774863 [debug] [Thread-1 (]: Writing injected SQL for node "model.aws_asset_inventory.aws_resources"
+[0m13:14:51.792146 [debug] [Thread-1 (]: Began executing node model.aws_asset_inventory.aws_resources
+[0m13:14:52.035106 [debug] [Thread-1 (]: Writing runtime sql for node "model.aws_asset_inventory.aws_resources"
+[0m13:14:52.054186 [debug] [Thread-1 (]: Using postgres connection "model.aws_asset_inventory.aws_resources"
+[0m13:14:52.058103 [debug] [Thread-1 (]: On model.aws_asset_inventory.aws_resources: BEGIN
+[0m13:14:52.062589 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:52.066843 [debug] [Thread-1 (]: Using postgres connection "model.aws_asset_inventory.aws_resources"
+[0m13:14:52.072704 [debug] [Thread-1 (]: On model.aws_asset_inventory.aws_resources: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "node_id": "model.aws_asset_inventory.aws_resources"} */
+
+  create view "asset_inventory"."public"."aws_resources__dbt_tmp"
+    
+    
+  as (
+    
+SELECT
+_cq_id, _cq_source_name, _cq_sync_time,
+
+account_id
+ AS account_id,
+
+SPLIT_PART(arn, ':', 5)
+ AS request_account_id, 
+CASE
+WHEN SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 2) = '' AND SPLIT_PART(arn, ':', 7) = '' THEN NULL
+ELSE SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 1)
+END AS TYPE,
+arn,
+
+region
+ AS region,
+
+tags
+ AS tags,
+SPLIT_PART(arn, ':', 2) AS PARTITION,
+SPLIT_PART(arn, ':', 3) AS service,
+'aws_apigateway_rest_api_stages' AS _cq_table
+FROM aws_apigateway_rest_api_stages
+UNION ALL 
+SELECT
+_cq_id, _cq_source_name, _cq_sync_time,
+
+account_id
+ AS account_id,
+
+SPLIT_PART(arn, ':', 5)
+ AS request_account_id, 
+CASE
+WHEN SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 2) = '' AND SPLIT_PART(arn, ':', 7) = '' THEN NULL
+ELSE SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 1)
+END AS TYPE,
+arn,
+
+region
+ AS region,
+
+tags
+ AS tags,
+SPLIT_PART(arn, ':', 2) AS PARTITION,
+SPLIT_PART(arn, ':', 3) AS service,
+'aws_apigateway_rest_apis' AS _cq_table
+FROM aws_apigateway_rest_apis
+UNION ALL 
+SELECT
+_cq_id, _cq_source_name, _cq_sync_time,
+
+account_id
+ AS account_id,
+
+SPLIT_PART(arn, ':', 5)
+ AS request_account_id, 
+CASE
+WHEN SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 2) = '' AND SPLIT_PART(arn, ':', 7) = '' THEN NULL
+ELSE SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 1)
+END AS TYPE,
+arn,
+
+'unavailable'
+ AS region,
+
+tags
+ AS tags,
+SPLIT_PART(arn, ':', 2) AS PARTITION,
+SPLIT_PART(arn, ':', 3) AS service,
+'aws_cloudfront_distributions' AS _cq_table
+FROM aws_cloudfront_distributions
+UNION ALL 
+SELECT
+_cq_id, _cq_source_name, _cq_sync_time,
+
+account_id
+ AS account_id,
+
+SPLIT_PART(arn, ':', 5)
+ AS request_account_id, 
+CASE
+WHEN SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 2) = '' AND SPLIT_PART(arn, ':', 7) = '' THEN NULL
+ELSE SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 1)
+END AS TYPE,
+arn,
+
+region
+ AS region,
+
+tags
+ AS tags,
+SPLIT_PART(arn, ':', 2) AS PARTITION,
+SPLIT_PART(arn, ':', 3) AS service,
+'aws_ec2_instances' AS _cq_table
+FROM aws_ec2_instances
+UNION ALL 
+SELECT
+_cq_id, _cq_source_name, _cq_sync_time,
+
+account_id
+ AS account_id,
+
+SPLIT_PART(arn, ':', 5)
+ AS request_account_id, 
+CASE
+WHEN SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 2) = '' AND SPLIT_PART(arn, ':', 7) = '' THEN NULL
+ELSE SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 1)
+END AS TYPE,
+arn,
+
+region
+ AS region,
+
+tags
+ AS tags,
+SPLIT_PART(arn, ':', 2) AS PARTITION,
+SPLIT_PART(arn, ':', 3) AS service,
+'aws_ec2_security_groups' AS _cq_table
+FROM aws_ec2_security_groups
+UNION ALL 
+SELECT
+_cq_id, _cq_source_name, _cq_sync_time,
+
+account_id
+ AS account_id,
+
+SPLIT_PART(arn, ':', 5)
+ AS request_account_id, 
+CASE
+WHEN SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 2) = '' AND SPLIT_PART(arn, ':', 7) = '' THEN NULL
+ELSE SPLIT_PART(SPLIT_PART(arn, ':', 6), '/', 1)
+END AS TYPE,
+arn,
+
+region
+ AS region,
+
+tags
+ AS tags,
+SPLIT_PART(arn, ':', 2) AS PARTITION,
+SPLIT_PART(arn, ':', 3) AS service,
+'aws_s3_buckets' AS _cq_table
+FROM aws_s3_buckets
+
+  );
+[0m13:14:52.082494 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:14:52.121193 [debug] [Thread-1 (]: Using postgres connection "model.aws_asset_inventory.aws_resources"
+[0m13:14:52.125481 [debug] [Thread-1 (]: On model.aws_asset_inventory.aws_resources: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "node_id": "model.aws_asset_inventory.aws_resources"} */
+alter table "asset_inventory"."public"."aws_resources__dbt_tmp" rename to "aws_resources"
+[0m13:14:52.129873 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:14:52.221862 [debug] [Thread-1 (]: On model.aws_asset_inventory.aws_resources: COMMIT
+[0m13:14:52.226535 [debug] [Thread-1 (]: Using postgres connection "model.aws_asset_inventory.aws_resources"
+[0m13:14:52.230563 [debug] [Thread-1 (]: On model.aws_asset_inventory.aws_resources: COMMIT
+[0m13:14:52.234794 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:14:52.273605 [debug] [Thread-1 (]: Applying DROP to: "asset_inventory"."public"."aws_resources__dbt_backup"
+[0m13:14:52.304879 [debug] [Thread-1 (]: Using postgres connection "model.aws_asset_inventory.aws_resources"
+[0m13:14:52.308934 [debug] [Thread-1 (]: On model.aws_asset_inventory.aws_resources: /* {"app": "dbt", "dbt_version": "1.8.1", "profile_name": "aws_asset_inventory", "target_name": "postgres", "node_id": "model.aws_asset_inventory.aws_resources"} */
+drop view if exists "asset_inventory"."public"."aws_resources__dbt_backup" cascade
+[0m13:14:52.313416 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:14:52.329097 [debug] [Thread-1 (]: On model.aws_asset_inventory.aws_resources: Close
+[0m13:14:52.341743 [info ] [Thread-1 (]: 1 of 1 OK created sql view model public.aws_resources .......................... [[32mCREATE VIEW[0m in 0.73s]
+[0m13:14:52.348154 [debug] [Thread-1 (]: Finished running node model.aws_asset_inventory.aws_resources
+[0m13:14:52.360602 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:52.365147 [debug] [MainThread]: On master: BEGIN
+[0m13:14:52.368655 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:14:52.404871 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:52.409365 [debug] [MainThread]: On master: COMMIT
+[0m13:14:52.413365 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:52.416623 [debug] [MainThread]: On master: COMMIT
+[0m13:14:52.420365 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:14:52.423530 [debug] [MainThread]: On master: Close
+[0m13:14:52.428035 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:14:52.431638 [debug] [MainThread]: Connection 'list_asset_inventory' was properly closed.
+[0m13:14:52.434869 [debug] [MainThread]: Connection 'model.aws_asset_inventory.aws_resources' was properly closed.
+[0m13:14:52.438728 [info ] [MainThread]: 
+[0m13:14:52.442864 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.53 seconds (1.53s).
+[0m13:14:52.448816 [debug] [MainThread]: Command end result
+[0m13:14:52.686822 [info ] [MainThread]: 
+[0m13:14:52.691802 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:14:52.695734 [info ] [MainThread]: 
+[0m13:14:52.701287 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m13:14:52.712815 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.083781, "process_user_time": 17.400625, "process_kernel_time": 0.30116, "process_mem_max_rss": "153256", "process_out_blocks": "3628", "process_in_blocks": "0"}
+[0m13:14:52.720280 [debug] [MainThread]: Command `dbt run` succeeded at 13:14:52.718970 after 11.09 seconds
+[0m13:14:52.723928 [debug] [MainThread]: Flushing usage events

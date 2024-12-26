@@ -1,0 +1,43 @@
+kind: source
+spec:
+  name: aws
+  path: cloudquery/aws
+  registry: cloudquery
+  version: "v27.21.0"
+  tables: ["aws_ec2_instances", "aws_s3_buckets", "aws_ec2_security_groups", "aws_apigateway_rest_api_stages", "aws_cloudfront_distributions"]
+  destinations: ["postgresql"]
+  spec:
+    regions: 
+      - '*'
+---
+kind: source
+spec:
+  name: gcp
+  path: cloudquery/gcp
+  registry: cloudquery
+  version: "v16.3.1"
+  tables: ["gcp_storage_buckets"]
+  destinations: ["postgresql"]
+  spec:
+    project_ids: ["komiser-production"]
+---
+kind: source
+spec:
+  name: azure
+  path: cloudquery/azure
+  registry: cloudquery
+  version: "v14.8.0"
+  tables: ["azure_storage_accounts"]
+  destinations: ["postgresql"]
+  spec:
+    project_ids: ["komiser-production"]
+---
+kind: destination
+spec:
+  name: postgresql
+  path: cloudquery/postgresql
+  registry: cloudquery
+  version: "v8.0.8"
+  write_mode: "overwrite-delete-stale"
+  spec:
+    connection_string: 'postgresql://postgres:postgres@localhost:5432/asset_inventory?sslmode=disable'

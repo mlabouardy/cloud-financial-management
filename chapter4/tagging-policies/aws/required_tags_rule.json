@@ -1,0 +1,15 @@
+{
+    "ConfigRuleName": "required-tags-for-ec2",
+    "Description": "Checks if EC2 instances have the required Environment and CostCenter tags",
+    "Scope": {
+        "ComplianceResourceTypes": [
+            "AWS::EC2::Instance",
+            "AWS::S3::Bucket"
+        ]
+    },
+    "Source": {
+        "Owner": "AWS",
+        "SourceIdentifier": "REQUIRED_TAGS"
+    },
+    "InputParameters": "{\"tag1Key\": \"Environment\", \"tag2Key\": \"CostCenter\"}"
+}

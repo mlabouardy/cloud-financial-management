@@ -1,0 +1,44 @@
+{
+    "tags": {
+      "CostCenter": {
+        "tag_key": {
+          "@@assign": "CostCenter"
+        },
+        "tag_value": {
+          "@@assign": [
+            "CC101-Marketing",
+            "CC102-Engineering",
+            "CC105-Sales",
+            "CC104-Operations"
+          ]
+        },
+        "enforced_for": {
+          "@@assign": [
+            "ec2:instance",
+            "lambda:function",
+            "s3:bucket"
+          ]
+        }
+      },
+      "Project": {
+        "tag_key": {
+          "@@assign": "Project"
+        },
+        "tag_value": {
+          "@@assign": [
+            "CustomerPortal",
+            "DevOpsAutomation",
+            "EcommercePlatform",
+            "LandingPage"
+          ]
+        },
+        "enforced_for": {
+          "@@assign": [
+            "ec2:instance",
+            "lambda:function",
+            "s3:bucket"
+          ]
+        }
+      }
+    }
+  }

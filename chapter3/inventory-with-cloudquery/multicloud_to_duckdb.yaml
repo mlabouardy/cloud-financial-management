@@ -1,0 +1,43 @@
+kind: source
+spec:
+  name: aws
+  path: cloudquery/aws
+  registry: cloudquery
+  version: "v27.21.0"
+  tables: ["aws_ec2_instances", "aws_s3_buckets"]
+  destinations: ["duckdb"]
+  spec:
+    regions: 
+      - '*'
+---
+kind: source
+spec:
+  name: gcp
+  path: cloudquery/gcp
+  registry: cloudquery
+  version: "v16.3.1"
+  tables: ["gcp_storage_buckets"]
+  destinations: ["duckdb"]
+  spec:
+    project_ids: ["komiser-production"]
+---
+kind: source
+spec:
+  name: azure
+  path: cloudquery/azure
+  registry: cloudquery
+  version: "v14.8.0"
+  tables: ["azure_storage_accounts"]
+  destinations: ["duckdb"]
+  spec:
+    project_ids: ["komiser-production"]
+---
+kind: destination
+spec:
+  name: duckdb
+  path: cloudquery/duckdb
+  registry: cloudquery
+  version: "v5.9.13"
+  write_mode: "overwrite-delete-stale"
+  spec:
+    connection_string: multi_cloud_inventory.db

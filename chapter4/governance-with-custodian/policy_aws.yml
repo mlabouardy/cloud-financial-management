@@ -1,0 +1,9 @@
+policies:
+  - name: append-costcenter-ifmissing
+    resource: aws.ec2
+    filters:
+      - "tag:CostCenter": absent
+    actions:
+      - type: tag
+        key: CostCenter
+        value: CC101-Marketing
