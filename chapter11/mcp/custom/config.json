@@ -1,0 +1,10 @@
+{
+    "mcpServers": {
+      "aws‑config‑nlq": {
+        "command": "python",
+        "args": ["/Users/mohamedlabouardy/go/src/github.com/mlabouardy/finops-book/chapter11/mcp/custom/server.py"],
+        "env": { "AWS_PROFILE":"default" }
+      }
+    }
+}
+  

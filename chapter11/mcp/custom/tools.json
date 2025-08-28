@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "tools": [
+      {
+        "name": "aws_config_nlq",
+        "description": "Run natural‑language questions via AWS Config advanced query processor.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "question": { "type": "string", "description": "User's question about AWS resources" },
+            "region": { "type": "string", "description": "AWS region (e.g. us-east-1)" }
+          },
+          "required": ["question", "region"]
+        }
+      }
+    ]
+  }
+  

@@ -1,3 +1,4 @@
 .DS_Store
 main
 *.zip
+*/.DS_Store
